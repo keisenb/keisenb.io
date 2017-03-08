@@ -26,23 +26,23 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Kyle Eisenbarger</a>
+                        <a class="navbar-brand" href="{{ url('/') }}">Kyle Eisenbarger</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="{{ url('/') }}">Home</a></li>
+                            <li><a href="{{ url('/about') }}">About</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="http://testing.kyle-eisenbarger.com/" target="_blank">Testing</a></li>
-                                    <li><a href="#">Drone</a></li>
+                                    <li><a href="{{ url('/drone') }}">Drone</a></li>
                                     <li role="separator" class="divider"></li>
                                     <li class="dropdown-header">Websites</li>
                                     <li><a href="#" target="_blank">Atrium Display</a></li>
                                     <li><a href="#" target="_blank">K-State ACM</a></li>
                                 </ul>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ url('/contact') }}">Contact</a></li>
                             </li>
                         </ul>
                     </div>

@@ -11,6 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'MainController@Index');
+Route::get('/about', 'MainController@About');
+Route::get('/drone', 'MainController@Drone');
+Route::get('/contact', 'MainController@Contact');
