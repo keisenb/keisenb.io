@@ -16,3 +16,15 @@ body {
 .navbar-nav>li>a:focus, .navbar-nav>li>a:hover {
     color: black !important;
 }
+
+.jmbo {
+    background-color: rgba(98, 62, 140, .85);
+    text-align: center !important;
+    width: 50%;
+
+}
+
+.name {
+    color: white !important;
+    font-size: 40px !important;
+}
