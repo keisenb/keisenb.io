@@ -1,0 +1,38 @@
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #000;
+  color: #fff;
+
+}
+
+a i {
+  color: #fff;
+  -moz-transition: color 0.2s ease, color 0.2s ease;
+  -webkit-transition: color 0.2s ease, color 0.2s ease;
+  -ms-transition: color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease, color 0.2s ease;
+}
+
+a i:hover {
+  color: rgba(255,255,255,0.5);
+}
+
+.container {
+  margin-top: 15%;
+  text-align: center;
+  z-index: 2;
+}
+
+.social {
+  margin-top: 20px;
+}
+
+.social a {
+  padding: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    background-image: url('/img/background.png');
+
+}
