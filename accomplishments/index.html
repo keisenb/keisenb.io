@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="The Official Website of Kyle James Eisenbarger.">
   <meta name="author" content="Kyle Eisenbarger">
-  <title>Kyle Eisenbarger | Projects</title>
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon-precomposed" href="favicon.ico" />
-  <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="../css/main.css" type="text/css" rel="stylesheet" media="screen,projection" />
+  <title>Kyle Eisenbarger | Accomplishments</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
-
-<body>
+<body id="video-player">
   <nav class="navbar navbar-default">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../">Home</a></li>
+            <li><a href="./">Accomplishments</a></li>
+            <li>
+              <a class="btn btn-default btn-outline btn-circle"  href="https://testing.keisenb.io" target=_blank>Current Project</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="collapse navbar-collapse" id="navbar-collapse-2">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="../">Home</a></li>
-          <li><a href="./">Accomplishments</a></li>
-          <li>
-            <a class="btn btn-default btn-outline btn-circle"  href="https://testing.keisenb.io" target=_blank>Current Project</a>
-          </li>
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
-  </nav><!-- /.navbar -->
+    </nav>
 
-  <div class="container container-main">
-    <h1>Accomplishments</h1>
-    <ul>
-        <li><a href="https://www.kansascityfed.org/publications/ten/articles/2017/fall/codeathon" target=_blank>3rd Place @ KC FRB Code-A-Thon 2017</a></li>
-        <li><a href="https://hackisu.org/" target=_blank>Best User Experience @ HackISU VIII</a></li>
-        <li><a href="http://www.conocophillips.com/" target=_blank>1st Place @ Conoco Phillips Innovation Challenge 2017</a></li>
-        <li><a href="http://cs.utdallas.edu/3rd-hackutd-2017/" target=_blank>Awarded Best Design @ HackUTD'17</a></li>
-        <li><a href="https://hackisu.org/" target=_blank>Created Hackstak @ HackISU VII</a></li>
-        <li><a href="https://gdc.cs.ksu.edu/annual-game-jam/" target=_blank>Best Use of AI @ K-State GDC Third Annual Game Jam</a></li>
-        <li><a href="https://www.engg.ksu.edu/steelring/openhouse" target=_blank>1st Place Display @ K-State Engineering Open House</a></li>
-    </ul>
-  </div>
+    <div class="container container-main">
+      <h1>Accomplishments</h1>
+      <ul>
+          <li><a href="https://www.kansascityfed.org/publications/ten/articles/2017/fall/codeathon" target=_blank>3rd Place @ KC FRB Code-A-Thon 2017</a></li>
+          <li><a href="https://hackisu.org/" target=_blank>Best User Experience @ HackISU VIII</a></li>
+          <li><a href="http://www.conocophillips.com/" target=_blank>1st Place @ Conoco Phillips Innovation Challenge 2017</a></li>
+          <li><a href="http://cs.utdallas.edu/3rd-hackutd-2017/" target=_blank>Awarded Best Design @ HackUTD'17</a></li>
+          <li><a href="https://hackisu.org/" target=_blank>Created Hackstak @ HackISU VII</a></li>
+          <li><a href="https://gdc.cs.ksu.edu/annual-game-jam/" target=_blank>Best Use of AI @ K-State GDC Third Annual Game Jam</a></li>
+          <li><a href="https://www.engg.ksu.edu/steelring/openhouse" target=_blank>1st Place Display @ K-State Engineering Open House</a></li>
+      </ul>
+    </div>
 
-  <div id="bgndVideo" class="player" data-property="{videoURL:'https://youtu.be/a4OikKyIT_A',containment:'body',autoPlay:true, loop:true, mute:true, showControls:false, opacity:0.5, mobileFallbackImage:'img/background.png', quality:'hd1080'}"></div>
-
-  <script src="../js/jquery.min.js"></script>
-  <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+  <div class="player" data-property="{videoURL:'https://youtu.be/a4OikKyIT_A',containment:'#video-player', autoPlay:true, loop:true, mute:true, showControls:false, opacity:0.6, optimizeDisplay:true}"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/main.js"></script>
-
+  <script src="../js/jquery.mb.YTPlayer.min.js"></script>
   <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  var myPlayer;
+  jQuery(function () {
+    myPlayer = jQuery(".player").YTPlayer();
+  });
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-87653964-2', 'auto');
-  ga('send', 'pageview');
+ga('create', 'UA-87653964-2', 'auto');
+ga('send', 'pageview');
 
 </script>
-
 </body>
 </html>
