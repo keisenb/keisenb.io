@@ -285,7 +285,7 @@ h2 + .header-anchor {
 .copyright {
     margin-top: 1em;
     font-size: .9em;
-    color: var(--color-gray-50);
+    color: var(--color-gray-90);
 }
 
 .header {
