@@ -6,27 +6,23 @@ eleventyNavigation:
 numberOfLatestPostsToShow: 3
 ---
 
-<img src="{{ '/img/headshot.jpeg' | url }}" width="75" height="75" class="headshot"/>
+<img src="{{ '/img/headshot.jpeg' | url }}" width="60" height="60" class="headshot"/>
 
 <h1 class="home-h1">Kyle Eisenbarger</h1>
 <h2 class="home-h2">Business Owner</h2>
 
 <p class="about-me-blurb">
-    Hi! I'm Kyle, a former full stack developer turned business owner & investor. 
-    
-    I currently own and operate Sunflower Real Estate, a homebuying company based in Kansas City. 
-    
+    Hi! I'm Kyle, a full stack developer turned business owner & investor. 
+    I currently own and operate <a href="https://www.sunflowerhomebuyers.com">Sunflower Real Estate</a>, a homebuying company based in Kansas City. 
     <br><br>
     Due to my background, I primarily focus on writing software in my business, and approach it with an 'automation first' mentaility always.
     <br><br>
     This site serves as a place for me to share my thoughts and what I've learned along the way.
-    
 </p>
-
 
 {% set postsCount = collections.posts | length %}
 {% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
-<h3>Recent Blog Post{% if latestPostsCount != 1 %}s{% endif %}</h3>
+<h3 class="home-h3">Recent Blog Post{% if latestPostsCount != 1 %}s{% endif %}</h3>
 
 {% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
 {% set postslistCounter = postsCount %}
@@ -36,12 +32,3 @@ numberOfLatestPostsToShow: 3
 {% if morePosts > 0 %}
 <p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="/blog/">the archive</a>.</p>
 {% endif %}
-
-{# List every content page in the project #}
-{#
-<ul>
-	{%- for entry in collections.all %}
-	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
-	{%- endfor %}
-</ul>
-#}
