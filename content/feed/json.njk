@@ -4,11 +4,11 @@ permalink: /feed/feed.json
 ---
 {
 	"version": "https://jsonfeed.org/version/1.1",
-	"title": "{{ metadata.title }}",
-	"language": "{{ metadata.language }}",
+	"title": {{ metadata.title | dump | safe }},
+	"language": {{ metadata.language | dump | safe }},
 	"home_page_url": "{{ metadata.url | addPathPrefixToFullUrl }}",
 	"feed_url": "{{ permalink | htmlBaseUrl(metadata.url) }}",
-	"description": "{{ metadata.description }}",
+	"description": {{ metadata.description | dump | safe }},
 	"author": {
 		"name": "{{ metadata.author.name }}",
 		"url": "{{ metadata.author.url }}"
@@ -19,7 +19,7 @@ permalink: /feed/feed.json
 		{
 			"id": "{{ absolutePostUrl }}",
 			"url": "{{ absolutePostUrl }}",
-			"title": "{{ post.data.title }}",
+			"title": {{ post.data.title | dump | safe }},
 			"content_html": {% if post.templateContent %}{{ post.templateContent | transformWithHtmlBase(absolutePostUrl, post.url) | dump | safe }}{% else %}""{% endif %},
 			"date_published": "{{ post.date | dateToRfc3339 }}"
 		}

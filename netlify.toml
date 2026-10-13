@@ -2,6 +2,28 @@
 	publish = "_site"
 	command = "npm run build"
 
+# Empty tag pages from the Eleventy starter drafts were in the sitemap.
+[[redirects]]
+	from = "/tags/number-2/"
+	to = "/tags/"
+	status = 301
+
+[[redirects]]
+	from = "/tags/second-tag/"
+	to = "/tags/"
+	status = 301
+
+[[redirects]]
+	from = "/tags/posts-with-two-tags/"
+	to = "/tags/"
+	status = 301
+
+# Old author URL from the feed.
+[[redirects]]
+	from = "/about-me/"
+	to = "/about/"
+	status = 301
+
 [[plugins]]
 
 	# Opt-in to the Netlify Lighthouse plugin (choose one):

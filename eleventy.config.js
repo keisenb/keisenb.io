@@ -65,6 +65,20 @@ module.exports = function(eleventyConfig) {
 		return Math.min.apply(null, numbers);
 	});
 
+	// Tag names that belong to published posts. Drafts are excluded from collections,
+	// but Eleventy still registers their tag keys, which would publish empty tag pages.
+	eleventyConfig.addCollection("publishedTags", (collectionApi) => {
+		const tags = new Set();
+		for (const item of collectionApi.getAll()) {
+			for (const tag of item.data.tags || []) {
+				if (!["all", "nav", "post", "posts"].includes(tag)) {
+					tags.add(tag);
+				}
+			}
+		}
+		return Array.from(tags);
+	});
+
 	// Return all the tags used in a collection
 	eleventyConfig.addFilter("getAllTags", collection => {
 		let tagSet = new Set();
@@ -94,7 +108,9 @@ module.exports = function(eleventyConfig) {
 
 	eleventyConfig.addShortcode("currentBuildDate", () => {
 		return (new Date()).toISOString();
-	})
+	});
+
+	eleventyConfig.addShortcode("currentYear", () => String(new Date().getFullYear()));
 
 	// Features to make your build faster (when you need them)
 

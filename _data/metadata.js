@@ -5,7 +5,7 @@ module.exports = {
 	description: "I am a business owner, full stack developer, plethora-of-hat-wearers, and I'm writing to share my experiences through the journey.",
 	author: {
 		name: "Kyle Eisenbarger",
-		email: "kyle@ienseb.io",
-		url: "https://keisenb.io/about-me/"
+		email: "kyle@keisenb.io",
+		url: "https://www.keisenb.io/about/"
 	}
 }

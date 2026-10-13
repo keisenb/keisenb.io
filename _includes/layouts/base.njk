@@ -3,8 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>{{ title or metadata.title }}</title>
-		<meta name="description" content="{{ description or metadata.description }}">
+		{% set documentTitle = metadata.title %}
+		{% if title %}
+			{% set documentTitle = title ~ " — " ~ metadata.title %}
+		{% endif %}
+		{% set documentDescription = description or metadata.description %}
+		<title>{{ documentTitle }}</title>
+		<meta name="description" content="{{ documentDescription }}">
+		<link rel="canonical" href="{{ page.url | htmlBaseUrl(metadata.url) }}">
+		<meta property="og:site_name" content="{{ metadata.title }}">
+		<meta property="og:title" content="{{ documentTitle }}">
+		<meta property="og:description" content="{{ documentDescription }}">
+		<meta property="og:url" content="{{ page.url | htmlBaseUrl(metadata.url) }}">
+		<meta property="og:type" content="{% if tags and 'posts' in tags %}article{% else %}website{% endif %}">
+		<meta property="og:image" content="{{ '/img/headshot.jpeg' | htmlBaseUrl(metadata.url) }}">
+		<meta name="twitter:card" content="summary">
 
 		{#- Atom and JSON feeds included by default #}
 		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
@@ -56,17 +69,17 @@
 		<footer class="footer">
             <nav>
                 <div>
-                    <a href="https://www.youtube.com/channel/UC_nA17Eq3_iozoZLXGF4gzQ" rel="me" class="footer-link">Youtube</a>
+                    <a href="https://www.youtube.com/channel/UC_nA17Eq3_iozoZLXGF4gzQ" rel="me" class="footer-link">YouTube</a>
                     <a href="https://github.com/keisenb" rel="me" class="footer-link">GitHub</a>
                     <a href="mailto:kyle@keisenb.io" class="footer-link">Email</a>
                     <span>•</span>
                     <a href="/feed/feed.xml" class="footer-link">RSS</a>
-                    <a href="https://www.sunflowerhomebuyers.com" rel="me" class="footer-link">Sunflower Real Estate</a>
+                    <a href="https://www.sunflowerhomebuyers.com" rel="me" class="footer-link">Sunflower Home Buyers</a>
                     
                 </div>
             </nav>
             <div class="copyright">
-                © 2017 - 2024 Kyle Eisenbarger
+                © 2017–{% currentYear %} Kyle Eisenbarger
             </div>
         </footer>
 
